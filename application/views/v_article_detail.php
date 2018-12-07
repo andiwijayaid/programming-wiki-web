@@ -55,7 +55,7 @@
             <ul class="main-navigation sf-menu">
                 <li class="current"><a href="<?php echo base_url('crud/index') ?>" title="">Home</a></li>
                 <li><a href="<?php echo base_url('crud/about') ?>" title="">About</a></li>
-                <li><a href="contact.html" title="">Contact</a></li>
+                <li><a href="<?php echo base_url('crud/add') ?>" title="">Contribute</a></li>
             </ul>
         </nav> <!-- end main-nav-wrap -->
     </div>
