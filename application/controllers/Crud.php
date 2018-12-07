@@ -75,15 +75,14 @@ class Crud extends CI_Controller
         $this->load->view('v_edit_article', $data);
     }
 
-    function edit_article() {
-        $id = $this->input->post('id');
-        $author = $this->input->post('author');
+    function update($id) {
+        $authorEdit = $this->input->post('author_edit');
         $image = $this->input->post('image');
         $title = $this->input->post('title');
         $articleText = $this->input->post('article_text');
 
         $data = array(
-            'author' => $author,
+            'author_edit' => $authorEdit,
             'image' => $image,
             'title' => $title,
             'article_text' => $articleText
@@ -94,7 +93,7 @@ class Crud extends CI_Controller
         );
 
         $this->m_article->update_data($where, $data, 'article');
-        redirect('crud/index');
+        redirect('crud/article_detail/'.$id);
     }
     // END OF UPDATE
 }

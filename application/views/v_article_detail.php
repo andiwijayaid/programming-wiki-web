@@ -74,7 +74,7 @@
 
                     <div class="content-media">
                         <div class="post-thumb">
-                            <img src="<?php echo $a->image ?>">
+                            <img class="article-image" src="<?php echo $a->image ?>">
                         </div>
                     </div>
 
@@ -94,14 +94,16 @@
                                 ?>
                             </li>
                             <li>
-                                <strong style="color: #000;">
-                                    <?php echo anchor('crud/edit/'.$a->id,'| Edit | '); ?>
+                                <strong class="article-option">
+                                    <?php echo anchor('crud/edit/'.$a->id,'Edit '); ?>
                                 </strong>
                             </li>
 
+                            <li>|</li>
+
                             <li>
-                                <strong style="color: #000;">
-                                    <?php echo anchor('crud/hapus/'.$a->id,'Delete |'); ?>
+                                <strong class="article-option">
+                                    <?php echo anchor('crud/hapus/'.$a->id,'Delete '); ?>
                                 </strong>
                             </li>
                         </ul>

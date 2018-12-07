@@ -2243,6 +2243,19 @@ header .logo a {
 	margin-bottom: 4.8rem;
 }
 
+.article-image {
+	display: block;
+	margin: auto;
+}
+
+.article-option {
+	padding: 8px;
+}
+
+strong.article-option:hover {
+	background-color: red;
+}
+
 #content-wrap .content-media img {
 	vertical-align: bottom;
 }
