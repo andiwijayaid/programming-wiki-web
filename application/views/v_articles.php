@@ -10,7 +10,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Abstract</title>
+    <title>Wiki</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -47,14 +47,14 @@
     <div class="row header-content">
 
         <div class="logo">
-            <a href="indexs.html">WIKI</a>
+            <a href="<?php echo base_url('crud/index') ?>">WIKI</a>
             <h2>WIKI</h2>
         </div>
 
         <nav id="main-nav-wrap">
             <ul class="main-navigation sf-menu">
-                <li class="current"><a href="indexs.html" title="">Home</a></li>
-                <li><a href="about.html" title="">About</a></li>
+                <li class="current"><a href="<?php echo base_url('crud/index') ?>" title="">Home</a></li>
+                <li><a href="<?php echo base_url('crud/about') ?>" title="">About</a></li>
                 <li><a href="contact.html" title="">Contact</a></li>
             </ul>
         </nav> <!-- end main-nav-wrap -->
@@ -88,7 +88,9 @@
                     <div class="entry-text">
                         <div class="entry-header">
 
-                            <h1 class="entry-title"><a href="<?php echo base_url('assets/single-standard.html')?>"><?php echo $a->title ?></a></h1>
+                            <h1 class="entry-title">
+                                <?php echo anchor('crud/article_detail/'.$a->id, $a->title); ?>
+                            </h1>
 
                         </div>
                         <div class="entry-excerpt">
@@ -186,7 +188,7 @@
 
             <div class="col-twelve">
                 <div class="copyright">
-                    <span>© Copyright Abstract 2016</span>
+                    <span>© Copyright Wiki 2016</span>
                     <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
                 </div>
 

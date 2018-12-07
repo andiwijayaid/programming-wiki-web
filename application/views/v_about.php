@@ -20,20 +20,19 @@
 
     <!-- CSS
   ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/base.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/vendor.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/main.css') ?>">
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+    <script src="<?php echo base_url('/assets/js/modernizr.js') ?>"></script>
+    <script src="<?php echo base_url('/assets/js/pace.min.js') ?>"></script>
 
     <!-- favicons
      ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo site_url('/assets/favicon.ico') ?>" type="image/x-icon">
+    <link rel="icon" href="<?php echo site_url('/assets/favicon.ico') ?>" type="image/x-icon">
 
 </head>
 
@@ -48,14 +47,14 @@
     <div class="row header-content">
 
         <div class="logo">
-            <a href="indexs.html">WIKI</a>
+            <a href="<?php echo base_url('crud/index') ?>">WIKI</a>
             <h2>WIKI</h2>
         </div>
 
         <nav id="main-nav-wrap">
             <ul class="main-navigation sf-menu">
-                <li><a href="indexs.html" title="">Home</a></li>
-                <li class="current"><a href="about.html" title="">About</a></li>
+                <li><a href="<?php echo base_url('crud/index') ?>" title="">Home</a></li>
+                <li class="current"><a href="<?php echo base_url('crud/about') ?>" title="">About</a></li>
                 <li><a href="contact.html" title="">Contact</a></li>
             </ul>
         </nav> <!-- end main-nav-wrap -->
@@ -71,10 +70,6 @@
         <div class="col-twelve">
 
             <section>
-
-                <div class="content-media">
-                    <img src="images/thumbs/about-us.jpg">
-                </div>
 
                 <div class="primary-content">
 
@@ -222,7 +217,7 @@
 
             <div class="col-twelve">
                 <div class="copyright">
-                    <span>© Copyright Wiki 2016</span>
+                    <span>© Copyright Abstract 2016</span>
                     <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
                 </div>
 
@@ -242,9 +237,10 @@
 
 <!-- Java Script
 ================================================== -->
-<script src="js/jquery-2.1.3.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="<?php echo base_url('/assets/js/jquery-2.1.3.min.js') ?>"></script>
+<script src="<?php echo base_url('/assets/js/plugins.js') ?>"></script>
+<script src="<?php echo base_url('/assets/js/jquery.appear.js') ?>"></script>
+<script src="<?php echo base_url('/assets/js/main.js') ?>"></script>
 
 </body>
 

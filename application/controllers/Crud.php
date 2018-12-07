@@ -21,4 +21,16 @@ class Crud extends CI_Controller
         $data['article'] = $this->m_article->tampil_data()->result();
         $this->load->view('v_articles', $data);
     }
+
+    function about()
+    {
+        $this->load->view('v_about');
+    }
+
+    function article_detail($id)
+    {
+        $where = array('id' => $id);
+        $data['article'] = $this->m_article->tampil_article($where, 'article')->result();
+        $this->load->view('v_article_detail', $data);
+    }
 }

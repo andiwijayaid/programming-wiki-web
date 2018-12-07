@@ -20,20 +20,19 @@
 
     <!-- CSS
   ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/base.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/vendor.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/main.css') ?>">
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+    <script src="<?php echo base_url('/assets/js/modernizr.js') ?>"></script>
+    <script src="<?php echo base_url('/assets/js/pace.min.js') ?>"></script>
 
     <!-- favicons
      ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo site_url('/assets/favicon.ico') ?>" type="image/x-icon">
+    <link rel="icon" href="<?php echo site_url('/assets/favicon.ico') ?>" type="image/x-icon">
 
 </head>
 
@@ -48,14 +47,14 @@
     <div class="row header-content">
 
         <div class="logo">
-            <a href="indexs.html">WIKI</a>
+            <a href="<?php echo base_url('crud/index') ?>">WIKI</a>
             <h2>WIKI</h2>
         </div>
 
         <nav id="main-nav-wrap">
             <ul class="main-navigation sf-menu">
-                <li class="current"><a href="indexs.html" title="">Home</a></li>
-                <li><a href="about.html" title="">About</a></li>
+                <li class="current"><a href="<?php echo base_url('crud/index') ?>" title="">Home</a></li>
+                <li><a href="<?php echo base_url('crud/about') ?>" title="">About</a></li>
                 <li><a href="contact.html" title="">Contact</a></li>
             </ul>
         </nav> <!-- end main-nav-wrap -->
@@ -63,53 +62,49 @@
 
 </header> <!-- end header -->
 
-
-<!-- masonry
+<!-- content
 ================================================== -->
-<section id="bricks">
+<section id="content-wrap" class="blog-single">
 
-    <div class="row masonry">
+    <div class="row">
+        <div class="col-twelve">
 
-        <!-- brick-wrapper -->
-        <div class="bricks-wrapper">
+            <?php foreach ($article as $a) { ?>
+                <article class="format-standard">
 
-            <div class="grid-sizer"></div>
-
-            <article class="brick entry format-standard animate-this">
-
-                <div class="entry-thumb">
-                    <a href="single-standard.html" class="thumb-link">
-                        <img src="images/thumbs/diagonal-building.jpg" alt="building">
-                    </a>
-                </div>
-
-                <div class="entry-text">
-                    <div class="entry-header">
-
-                        <div class="entry-meta">
-               			<span class="cat-links">
-               				<a href="#">Design</a> 
-               				<a href="#">Photography</a>               				
-               			</span>
+                    <div class="content-media">
+                        <div class="post-thumb">
+                            <img src="<?php echo $a->image ?>">
                         </div>
-
-                        <h1 class="entry-title"><a href="single-standard.html">Just a Standard Format Post.</a></h1>
-
                     </div>
-                    <div class="entry-excerpt">
-                        Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident
-                        dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint
-                        in aliqua cillum in consequat consequat in culpa in anim.
-                    </div>
-                </div>
 
-            </article> <!-- end article -->
+                    <div class="primary-content">
 
-        </div> <!-- end brick-wrapper -->
+                        <h1 class="page-title"><?php echo $a->title ?></h1>
 
+                        <ul class="entry-meta">
+                            <li class="cat">
+                                <?php
+                                    echo 'by ' . $a->author;
+                                    $author_edit = $a->author_edit;
+                                    if ($author_edit != null) {
+                                        echo ', edited by ' . $author_edit;
+                                    }
+                                }
+                                ?>
+                            </li>
+                        </ul>
+
+                        <p class="lead"><?php echo $a->article_text ?></p>
+
+                    </div> <!-- end entry-primary -->
+
+                </article>
+
+        </div> <!-- end col-twelve -->
     </div> <!-- end row -->
 
-</section> <!-- end bricks -->
+</section> <!-- end content -->
 
 
 <!-- footer
@@ -192,7 +187,7 @@
 
             <div class="col-twelve">
                 <div class="copyright">
-                    <span>© Copyright Wiki 2016</span>
+                    <span>© Copyright Abstract 2016</span>
                     <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
                 </div>
 
@@ -212,10 +207,10 @@
 
 <!-- Java Script
 ================================================== -->
-<script src="js/jquery-2.1.3.min.js"></script>
-<script src="js/plugins.js"></script>
+<script src="<?php echo base_url('/assets/js/jquery-2.1.3.min.js') ?>"></script>
+<script src="<?php echo base_url('/assets/js/plugins.js') ?>"></script>
 <script src="<?php echo base_url('/assets/js/jquery.appear.js') ?>"></script>
-<script src="js/main.js"></script>
+<script src="<?php echo base_url('/assets/js/main.js') ?>"></script>
 
 </body>
 

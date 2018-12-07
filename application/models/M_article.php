@@ -13,4 +13,8 @@ class M_article extends CI_Model
         return $this->db->get('article');
     }
 
+    function tampil_article($where, $table) {
+        return$this->db->get_where($table, $where);
+    }
+
 }
