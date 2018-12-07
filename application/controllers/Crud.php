@@ -33,4 +33,28 @@ class Crud extends CI_Controller
         $data['article'] = $this->m_article->tampil_article($where, 'article')->result();
         $this->load->view('v_article_detail', $data);
     }
+
+    // Add
+    function add()
+    {
+        $this->load->view('v_add_article');
+    }
+
+    function add_article()
+    {
+        $author = $this->input->post('author');
+        $image = $this->input->post('image');
+        $title = $this->input->post('title');
+        $articleText = $this->input->post('article_text');
+
+        $data = array(
+            'author' => $author,
+            'image' => $image,
+            'title' => $title,
+            'article_text' => $articleText
+        );
+        $this->m_article->input_data($data, 'article');
+        redirect('crud/index');
+    }
+    // END OF ADD
 }

@@ -93,6 +93,7 @@
                                 }
                                 ?>
                             </li>
+                            <li><strong style="color: #000;">Edit</strong></li>
                         </ul>
 
                         <p class="lead"><?php echo $a->article_text ?></p>

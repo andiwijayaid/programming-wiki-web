@@ -55,7 +55,7 @@
             <ul class="main-navigation sf-menu">
                 <li class="current"><a href="<?php echo base_url('crud/index') ?>" title="">Home</a></li>
                 <li><a href="<?php echo base_url('crud/about') ?>" title="">About</a></li>
-                <li><a href="contact.html" title="">Contact</a></li>
+                <li><a href="<?php echo base_url('crud/add') ?>" title="">Contribute</a></li>
             </ul>
         </nav> <!-- end main-nav-wrap -->
     </div>
@@ -80,7 +80,7 @@
                 ?>
                 <article class="brick entry format-standard animate-this">
                     <div class="entry-thumb">
-                        <a href="single-standard.html" class="thumb-link">
+                        <a href="<?php echo base_url('crud/article_detail/'.$a->id) ?>" class="thumb-link">
                             <img src="<?php echo $a->image ?>" alt="image">
                         </a>
                     </div>
