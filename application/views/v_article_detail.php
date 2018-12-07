@@ -93,7 +93,17 @@
                                 }
                                 ?>
                             </li>
-                            <li><strong style="color: #000;">Edit</strong></li>
+                            <li>
+                                <strong style="color: #000;">
+                                    <?php echo anchor('crud/edit/'.$a->id,'| Edit | '); ?>
+                                </strong>
+                            </li>
+
+                            <li>
+                                <strong style="color: #000;">
+                                    <?php echo anchor('crud/hapus/'.$a->id,'Delete |'); ?>
+                                </strong>
+                            </li>
                         </ul>
 
                         <p class="lead"><?php echo $a->article_text ?></p>

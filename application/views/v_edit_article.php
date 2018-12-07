@@ -13,7 +13,7 @@
 
     <!-- CSS
   ================================================== -->
-<!--    <link rel="stylesheet" href="--><?php //echo base_url('/assets/css/base.css') ?><!--">-->
+    <!--    <link rel="stylesheet" href="--><?php //echo base_url('/assets/css/base.css') ?><!--">-->
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/vendor.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/main.css') ?>">
 
@@ -49,16 +49,18 @@
     <div class="row">
         <div class="col-12">
             <div class="form_main">
-                <h4 class="heading">New <strong>Article</strong><span></span></h4>
+                <h4 class="heading">Edit <strong>Article</strong><span></span></h4>
                 <div class="form">
-                    <form action="<?php echo base_url(). 'crud/add_article'; ?>" method="post" id="contactFrm" name="contactFrm">
-                        <input type="text" required="" placeholder="Please input your Name" value="" name="author" class="txt">
-                        <input type="text" required="" placeholder="Please input Image URL" value="" name="image" class="txt">
-                        <input type="text" required="" placeholder="Title" value="" name="title" class="txt">
+                    <?php foreach($article as $a){ ?>
+                        <form action="<?php echo base_url(). 'crud/edit_article'; ?>" method="post" id="contactFrm" name="contactFrm">
+                            <input type="text" required="" placeholder="Please input your Name" value="<?php echo $a->author ?>" name="author" class="txt">
+                            <input type="text" required="" placeholder="Please input Image URL" value="<?php echo $a->image ?>" name="image" class="txt">
+                            <input type="text" required="" placeholder="Title" value="<?php echo $a->title ?>" name="title" class="txt">
 
-                        <textarea placeholder="Your Article" name="article_text" type="text" class="txt_3"></textarea>
-                        <input type="submit" value="submit" name="submit" class="txt2">
-                    </form>
+                            <textarea placeholder="Your Article" name="article_text" type="text" class="txt_3"><?php echo $a->article_text ?></textarea>
+                            <input type="submit" value="submit" name="submit" class="txt2">
+                        </form>
+                    <?php } ?>
                 </div>
             </div>
         </div
